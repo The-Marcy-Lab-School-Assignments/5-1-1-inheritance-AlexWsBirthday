@@ -1,3 +1,5 @@
+import { ssNumGenerator } from "./social-security.js"
+
 class Quadrilateral {
 
   constructor(side1, side2, side3, side4) {
@@ -43,9 +45,25 @@ class Square extends Rectangle {
 
 /* Be creative with this one! */
 
+//social security ----------------------
+const getSocial = ssNumGenerator()
+
+const mentalDisorderGen = () => {
+  let randomNum = Math.floor(Math.random() * 1000000000)
+}
 
 class Person {
-  #socialSecurity
+  static #godsNaughtyList = [];
+  #socialSecurity = getSocial()
+
+  constructor() {
+
+    Person.#godsNaughtyList.push(this)
+  }
+
+  static listPeople() {
+    return [...Person.#godsNaughtyList]
+  }
 
 }
 

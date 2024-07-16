@@ -4,7 +4,7 @@ const {
   Quadrilateral,
   Rectangle,
   Square,
-} = require('./from-scratch');
+} = require('./from-scratch.js');
 
 const testSuiteName = 'From Scratch Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
